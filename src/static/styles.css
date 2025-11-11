@@ -58,13 +58,13 @@ section h3 {
 }
 
 #activities-container {
-  width: 100%;
+  width: 100px;
   background: white;
+  margin-bottom: 20px;
 }
 
 #activities-list {
-  max-height: 70vh;
-  min-height: 400px;
+  height: 100px;  /* Changed from max-height: 70vh */
   overflow-y: auto;
   padding: 10px;
   border: 1px solid #e0e0e0;
@@ -183,14 +183,31 @@ footer {
 
 .participants ul {
   margin: 5px 0 0 0;
-  padding-left: 20px;
-  list-style-type: disc;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 .participants li {
   color: #495057;
   font-size: 0.9em;
   margin: 2px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-participant {
+  cursor: pointer;
+  color: #dc3545;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+  cursor: hand;  /* For older browsers */
+  cursor: pointer;  /* Standard syntax */
+}
+
+.delete-participant:hover {
+  background-color: #fee2e2;
 }
 
 .no-participants {
